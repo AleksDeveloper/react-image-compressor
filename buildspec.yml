@@ -6,6 +6,7 @@ phases:
       - echo add keys
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - apt-get update
+      - pwd
       - echo installing nodejs...
       - curl -sL https://deb.nodesource.com/setup_20.x | bash -
       - apt-get install -y nodejs
