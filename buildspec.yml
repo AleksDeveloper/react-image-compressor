@@ -21,6 +21,7 @@ phases:
       - npm install
       - echo updating dependencies...
       - npm update
+      - npm audit fix --force
   build:
     commands:
       - echo building...
