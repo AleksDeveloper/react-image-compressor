@@ -9,7 +9,7 @@ phases:
       - pwd
       - ls
       - echo installing nodejs...
-      - curl -sL https://deb.nodesource.com/setup_20.x | bash -
+      #- curl -sL https://deb.nodesource.com/setup_20.x | bash -
       - apt-get install -y nodejs
       # - echo installing yarn...
       # - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
@@ -19,9 +19,10 @@ phases:
     commands:
       - echo installing dependencies...
       - npm install
+      - npm i react-scripts@latest
       - echo updating dependencies...
       - npm update
-      - npm audit fix --force
+      #- npm audit fix --force
   build:
     commands:
       - echo building...
