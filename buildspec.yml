@@ -3,6 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo add keys
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      - apt-get update
       - echo installing nodejs...
       - curl -sL https://deb.nodesource.com/setup_20.x | bash -
       - apt-get install -y nodejs
