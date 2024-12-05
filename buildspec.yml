@@ -3,8 +3,6 @@ version: 0.2
 phases:
   install:
     commands:
-      #- echo add keys
-      #- curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - apt-get update
       - pwd
       - ls
@@ -19,10 +17,8 @@ phases:
     commands:
       - echo installing dependencies...
       - npm install
-      - npm i react-scripts@latest
-      - echo updating dependencies...
-      - npm update
-      #- npm audit fix --force
+      - echo fixing SSL...
+      - export NODE_OPTIONS=--openssl-legacy-provider
   build:
     commands:
       - echo building...
